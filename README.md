@@ -1,5 +1,4 @@
-# myhippospace
-Templates for myhippospace
+# example markup
 
 ## Frontend
 
