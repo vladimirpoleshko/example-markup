@@ -1,7 +1,7 @@
 {
   "name": "name",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {
     "browser-sync": "^2.12.5",
     "del": "^3.0.0",
@@ -19,15 +19,22 @@
     "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
+    "nodemon": "^1.17.5",
     "run-sequence": "^2.2.1",
     "swiper": "^4.1.6"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.1.20",
+    "express": "^4.16.3",
     "gulp": "^3.9.1",
-    "gulp-install": "^1.1.0"
+    "gulp-install": "^1.1.0",
+    "path": "^0.12.7"
   },
   "scripts": {
+    "start": "npm run build && node server.js",
+    "build": "gulp build",
+    "watchAssets": "PORT=5000 gulp",
+    "watchServer": "PORT=5000 nodemon --watch server.js ./server.js",
+    "dev": "npm run watchAssets & npm run watchServer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "VP",
