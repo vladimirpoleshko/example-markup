@@ -1,9 +1,9 @@
 /*general*/
 body, html {
-	font:16px/24px $font-regular;
+	font:16px/24px Arial, Helvetica, sans-serif;
 	height:100%;
 	background:#fff;
-	color: $color-black;
+	color: #000;
 	min-width: 1180px;
 }
 select, input, textarea {
